@@ -1,0 +1,242 @@
+@font-face {
+  font-family: "Nunito Sans";
+  src: url("./assets/fonts/static/NunitoSans_10pt-ExtraBold.ttf") format("ttf");
+  src: url("./assets/fonts/static/NunitoSans_10pt-Regular.ttf") format("ttf");
+  src: url("./assets/fonts/static/NunitoSans_10pt-Bold.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("./assets/fonts/Poppins-ExtraBold.ttf") format("ttf");
+  src: url("./assets/fonts/Poppins-Regular.ttf") format("ttf");
+  src: url("./assets/fonts/Poppins-Bold.ttf") format("ttf");
+}
+
+:root {
+  --main-color: #000000;
+  --main-bg-color: #ece2da;
+  --bg-color: #e9e3d6;
+  --white-color: #ffffff;
+  --hover-header-color: #6555b3;
+  --button-bg-header: #99aec1;
+  --pink-color: #a5668b;
+  --pink-hover-color: #8d4f73b6;
+  --black-shadow: rgba(0, 0, 0, 0.445);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+a,
+input,
+button,
+li {
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+  text-decoration: none;
+  list-style: none;
+}
+
+/* .site_header {
+  position: fixed;
+} */
+
+.admin-bar .site_header {
+  top: 32px;
+}
+
+.site_header {
+  position: sticky;
+  width: 100%;
+  height: 80px;
+  top: 0px;
+  display: flex;
+  background-color: var(--bg-color);
+  z-index: 9999;
+  align-items: center;
+  padding: auto 50px;
+  box-shadow: 0 0 4px 0 var(--black-shadow);
+}
+
+.site_header a {
+  min-width: 205px;
+  padding-left: 70px;
+}
+
+.site_header a > img {
+  max-width: 90.5%;
+  height: auto;
+}
+
+.site_header_menu {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: var(--main-color);
+  padding-right: 100px;
+}
+
+.site_header_menu > li,
+.site_footer_menu > li {
+  display: flex;
+  justify-content: center;
+}
+
+.site_header_menu li > a,
+.site_footer_menu li > a {
+  font-family: "Nunito Sans", sans-serif;
+  line-height: 84px;
+  font-size: 1rem;
+  color: var(--main-color);
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.site_header_menu li > a:hover,
+.site_footer_menu li > a:hover {
+  color: var(--hover-header-color);
+}
+#menu-item-139 .sub-menu {
+  display: none;
+}
+
+#menu-item-151 > a {
+  background-color: var(--button-bg-header);
+  padding: 10px 16px;
+  border-radius: 80px;
+  line-height: 30px;
+}
+
+main {
+  font-family: "Poppins", sans-serif;
+}
+
+.banner {
+  background-color: var(--bg-color);
+  width: 100%;
+  height: 629px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.banner_image {
+  display: flex;
+}
+
+.banner img {
+  height: 100%;
+}
+
+.banner_text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 14em;
+  width: 800px;
+}
+
+.banner_text p {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1.953rem;
+  font-weight: 400;
+  color: var(--main-color);
+  line-height: 40px;
+}
+
+.banner_text p > span {
+  color: var(--pink-color);
+  font-weight: 700;
+}
+
+.banner_text button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px 6px 6px 6px;
+  padding: 14px 18px;
+  background-color: var(--pink-color);
+  width: 65%;
+  cursor: pointer;
+  margin-top: 3em;
+}
+
+.banner_text button:hover {
+  background-color: var(--pink-hover-color);
+}
+.banner_text a {
+  color: var(--white-color);
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1.563rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.banner_text a > img {
+  float: right;
+}
+
+section {
+  margin: 6em auto;
+  width: 100%;
+}
+
+.missions h2 {
+  margin-left: 7em;
+}
+
+h2 {
+  margin: 2em auto;
+  font-size: 1.953rem;
+  font-weight: 800;
+}
+
+.missions_wrapper {
+  margin: 6em 10em;
+  display: flex;
+  justify-content: space-around;
+}
+
+.missions_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.missions_box img {
+  width: 250px;
+  height: 250px;
+}
+
+.missions_box p {
+  font-size: 1.563rem;
+  font-weight: 700;
+}
+
+/* Footer */
+
+.site_footer {
+  position: relative;
+  bottom: 0px;
+  background-color: var(--bg-color);
+}
+
+.site_footer_menu {
+  display: flex;
+}
+
+.site_footer_menu {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.site_footer_menu li {
+  padding: 1em;
+}
