@@ -8,16 +8,21 @@
     <?php wp_head(); ?>
 </head>
 
-<body <?php body_class('site'); ?>>
-    <?php wp_body_open('site'); ?>
-    <header class="site_header">
-        <a href="<?php echo home_url('/'); ?>">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/VINA_MARIE-LUCE.svg" alt="Logo">
-        </a>
+<body <?php body_class(); ?>>
+    <?php wp_body_open(); ?>
+    <header class="top">
+        <div class="top_logo">
+            <a href="<?php echo home_url('/'); ?>">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/VINA_MARIE-LUCE.svg" alt="Logo">
+            </a>
+        </div>
 
         <?php wp_nav_menu(array(
             'theme_location' => 'main',
-            'container' => 'ul',
-            'menu_class' => 'site_header_menu'
+            'container' => 'nav',
+            'container_class' => 'top_menu_container',
+            'menu_id' => 'top_menu',
+            'menu_class' => 'top_menu',
+
         )); ?>
     </header>

@@ -9,10 +9,8 @@
             <h1><?php the_title(); ?></h1>
 
             <div class="post__meta">
-                <?php echo get_avatar(get_the_author_meta('ID'), 40); ?>
+
                 <p>
-                    Publié le <?php the_date(); ?>
-                    par <?php the_author(); ?>
                     Dans la catégorie <?php the_category(); ?>
                     Avec les étiquettes <?php the_tags(); ?>
                 </p>
@@ -43,5 +41,5 @@
 
 <?php endwhile;
 endif; ?>
-<?php get_template_part('template-parts/newsletter'); ?>
+
 <?php get_footer(); ?>
