@@ -9,11 +9,7 @@
             <h1 class="site_heading"><?php post_type_archive_title(); ?></h1>
 
         </div>
-        <!-- <div class="banner_media overlay">
-            <video class="banner_media_video" autoplay muted loop playsinline data-object-fit="cover">
-                <source src="<?php echo get_theme_file_uri() . '/assets/video/vortex_vml.mp4' ?>">
-            </video>
-        </div> -->
+
     </div>
     <div class="project_grid_wrapper">
 
@@ -24,7 +20,9 @@
         <div class="project_grid">
             <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
                     <div class="project">
-                        <?php the_post_thumbnail(); ?>
+                        <a href="<?php the_permalink(); ?>" class="post__link">
+                            <?php the_post_thumbnail(); ?>
+                        </a>
                     </div>
             <?php endwhile;
             endif; ?>

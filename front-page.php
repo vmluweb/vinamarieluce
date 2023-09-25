@@ -17,5 +17,9 @@
     </div>
 
     <!-- emplacement expertise à ajouter ici-->
+    <?php get_template_part('template-parts/expertise'); ?>
+    <?php get_template_part('template-parts/gallery-home'); ?>
+
+
 </main>
 <?php get_footer(); ?>

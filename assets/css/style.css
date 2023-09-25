@@ -31,6 +31,10 @@
   /* padding: 0; */
 }
 
+html {
+  width: 100%;
+}
+
 body {
   background-color: var(--main-color);
 }
@@ -45,6 +49,23 @@ li {
   background: none;
   text-decoration: none;
   list-style: none;
+}
+
+h2,
+h3,
+p {
+  color: var(--white-color);
+}
+
+h2 {
+  font-size: 1.953rem;
+  font-weight: 800;
+  color: var(--pink-color);
+  margin: 1em auto;
+}
+
+h3 {
+  padding: 0.5em;
 }
 
 .admin-bar .top {
@@ -220,54 +241,105 @@ main {
 
 /* Missions */
 section {
-  margin: 6em auto;
-  width: 100%;
-}
-
-.missions h2 {
-  margin-left: 7em;
-}
-
-h2 {
-  margin: 2em auto;
-  font-size: 1.953rem;
-  font-weight: 800;
-  color: var(--button-bg-header);
-}
-
-.missions p {
-  color: var(--white-color);
-}
-
-.missions_wrapper {
-  margin: 6em 10em;
+  margin: 0 auto;
+  padding: 5em 0 5em 0;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  background-color: #0000004d;
 }
 
-.missions_box {
+.subject_container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  max-width: 1000px;
 }
 
-.missions_box img {
-  width: 250px;
-  height: 250px;
+.subject_intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  /* width: 35em; */
+  margin: 1em auto;
 }
 
-.missions_box p {
+.subject_intro p {
+  font-size: 1.35rem;
+  font-weight: 400;
+  line-height: 30px;
+  margin-top: 2em;
+}
+
+.subject_cards {
+  margin: 4em 0em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.subject_cards_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+}
+
+.subject_cards_box img {
+  width: 200px;
+  height: 200px;
+}
+
+.subject_cards_box p {
   font-size: 1.563rem;
   font-weight: 700;
   margin-top: 2em;
 }
 
-/* Galerie de projets*/
+/* Homepage gallery */
+.homepage_gallery {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white-color);
+}
+
+.homepage_gallery_container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2em auto;
+  max-width: 1200px;
+}
+
+.gallery_card {
+  display: flex;
+  flex-direction: column;
+  width: 33.33%;
+  /* height: 70%; */
+  padding: 15px;
+  border-radius: 4px;
+}
+
+.gallery_image img {
+  width: 100%;
+  max-height: 495px;
+}
+
+.gallery_image img {
+  object-fit: cover;
+  object-position: top;
+  /* width: 330px;
+  height: 495px; */
+}
+
+.gallery_title h3 {
+  color: var(--main-color);
+}
+
+/* Portfolio gallery*/
 .project_grid_wrapper {
   position: relative;
   padding-bottom: 6em;
-  /* z-index: 3; */
 }
 
 .media_video {
@@ -305,13 +377,17 @@ h2 {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: var(--pink-color);
+  background-color: var(--main-color);
   opacity: 0;
   transition: opacity 0.3s;
 }
 
 .project::before:hover {
-  opacity: 1;
+  opacity: 0.5;
+}
+
+.project .post__link {
+  position: relative;
 }
 
 .project img {
