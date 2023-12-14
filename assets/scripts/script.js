@@ -4,10 +4,10 @@
  * Version : 1.0
  */
 
-jQuery(document).ready(function () {
-  jQuery(".toggleMenu").click(function (e) {
-    jQuery("#menu ul").slideToggle(500);
-    e.preventDefault();
+jQuery(document).ready(function ($) {
+  // Gestion du menu burger
+  $(".burgerMenu").click(function () {
+    $(".menu-navigation").toggleClass("active");
   });
 });
 
@@ -16,7 +16,7 @@ const video = document.querySelector(".media_video");
 
 const projectGridContainer = document.querySelector(".project_grid_wrapper");
 
-// Vitesse de lecture à 0.5
+// Vitesse de lecture
 video.playbackRate = 0.25;
 
 function playPause() {
